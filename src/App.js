@@ -1,12 +1,15 @@
-import React from "react";
- class App extends React.Component{
-    render(){
-      return(
-        <div className="App">
-          <h1>HELLO WORLD!</h1>
-          <button>click me</button>
-        </div>
-      );
-    }
+import React from 'react';
+import Header from "./components/Header";
+ 
+function App() {
+  return (
+    <div>
+      <Header />
+      <h1>Welcome</h1>
+      <p> hi hi</p>
+      <p>Help reduce food waste by donating extra food.</p>
+    </div>
+  );
 }
+
 export default App;
