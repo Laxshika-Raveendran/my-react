@@ -1,13 +1,24 @@
-import React from 'react';
-import Header from "./components/Header";
- 
+import React, { useState } from "react";
+import Header from "./components/header";
+import DonationForm from "./components/Donation form";
+
 function App() {
+  const [food, setFood] = useState("");
+
   return (
     <div>
-      <Header />
-      <h1>Welcome</h1>
-      <p> hi hi</p>
-      <p>Help reduce food waste by donating extra food.</p>
+      <Header title="Food Donation System" />
+
+      <h1>Food Donation</h1>
+
+      <input
+        type="text"
+        placeholder="Enter food name"
+        value={food}
+        onChange={(e) => setFood(e.target.value)}
+      />
+
+      <p>Food: {food}</p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
-function Header() {
+function Header(props) {
   return (
     <header>
-      <h2>Food Donation System</h2>
+      <h2>{props.title}</h2>
     </header>
   );
 }
