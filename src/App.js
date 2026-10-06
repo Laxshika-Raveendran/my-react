@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/header";
 import DonationForm from "./components/Donation form";
-
 function App() {
   const [food, setFood] = useState("");
 
