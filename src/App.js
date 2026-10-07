@@ -1,24 +1,27 @@
-import React, { useState } from "react";
-import Header from "./components/header";
-import DonationForm from "./components/Donation form";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Donate from "./pages/Donate";
+import Donations from "./pages/Donations";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
 function App() {
-  const [food, setFood] = useState("");
-
   return (
-    <div>
-      <Header title="Food Donation System" />
+    <BrowserRouter>
+    <Navbar />
+      <Routes>
 
-      <h1>Food Donation</h1>
+        <Route path="/" element={<Home />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/donations" element={<Donations />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
-      <input
-        type="text"
-        placeholder="Enter food name"
-        value={food}
-        onChange={(e) => setFood(e.target.value)}
-      />
-
-      <p>Food: {food}</p>
-    </div>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
